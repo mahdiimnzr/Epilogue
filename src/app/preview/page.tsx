@@ -1,7 +1,10 @@
 import Button from "@/components/atoms/button/Button";
 import ButtonOnlyIcon from "@/components/atoms/buttonOnlyIcon/buttonOnlyIcon";
+import Checkbox from "@/components/atoms/checkbox/Checkbox";
 import HomeLogo from "@/components/atoms/Logo/home-logo";
+import Radio from "@/components/atoms/radio/Radio";
 import SignButton from "@/components/atoms/Sign-button/signButton";
+import Switch from "@/components/atoms/switch/Switch";
 import { ArrowRight01Icon, User } from "@hugeicons/core-free-icons";
 import { HugeiconsIcon } from "@hugeicons/react";
 
@@ -105,10 +108,37 @@ export default function ComponentsPreview() {
                 </h2>
 
                 <div className="flex flex-wrap items-center gap-4">
-                                   <HomeLogo />
+                    <HomeLogo />
 
 
                 </div>
+
+
+
+            </section>
+            <h1 className="text-xl font-semibold text-black dark:text-white">
+                Switch Preview
+            </h1>
+
+            {/* Uncontrolled */}
+            <section className="flex items-center gap-4">
+                <span className="text-sm text-black dark:text-white">
+                    Switch
+                </span>
+                <Switch defaultChecked={false} />
+                <span className="text-sm text-black dark:text-white">
+                    Checkbox
+                </span>
+                <Checkbox
+                />
+                <span className="text-sm text-black dark:text-white">
+                    Radio
+                </span>
+                <Radio
+                    options={[
+                        { value: "option-1" },
+                    ]}
+                />
             </section>
         </main>
     );
