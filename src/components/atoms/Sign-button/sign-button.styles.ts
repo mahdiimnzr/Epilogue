@@ -12,8 +12,8 @@ export const signButtonStyles = `
 
   border
   border-solid
-  border-1
-  border-gray-300
+  border
+  border-neutral-700
 
   bg-transparent
 
@@ -25,8 +25,6 @@ export const signButtonStyles = `
 
   cursor-pointer
 
-  hover:[border-width:var(--border-width-md)]
-  hover:border-Neutral-700
 `;
 
 export const signButtonIcon = `

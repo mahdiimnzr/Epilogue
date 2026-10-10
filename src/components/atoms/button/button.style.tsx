@@ -1,17 +1,20 @@
 import type { ButtonSize, ButtonState, ButtonVariant } from './button.type';
 
+const iconGap = `  
+  gap-[8px]
+  hover:gap-[16px]
+  active:gap-[16px]`;
+
 export const buttonSizeVariants: Record<ButtonSize, string> = {
-  sm: `
+  sm: `     
     h-[40px]
-   text-[14px]
+    text-[14px]
   `,
-
-  md: `
+  md: `     
     h-[48px]
-   text-[16px]
+    text-[16px]
   `,
-
-  lg: `
+  lg: `     
     h-[56px]
     text-[18px]
     text-[var(--font-weight-medium)]
@@ -26,36 +29,31 @@ export const buttonWidthVariants: Record<ButtonState, string> = {
 };
 
 export const buttonVariants: Record<ButtonVariant, Record<ButtonState, string>> = {
-  primary: {
-    default: `
-      bg-[var(--color-primary-500)] text-white
-      hover:bg-[var(--color-primary-700)]
-      active:bg-[var(--color-primary-400)]
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
-    `,
 
-    disabled: `
-      bg-[var(--color-primary-200)]
-      text-white
-      cursor-not-allowed
-    `,
+  primary: {
+    default: `    
+       bg-[var(--color-primary-500)]
+       text-white
+       hover:bg-[var(--color-primary-600)]
+       active:bg-[var(--color-primary-400)]
+       ${iconGap}
+     `,
+    disabled: `       
+       bg-[var(--color-primary-200)]
+       text-white
+       cursor-not-allowed
+     `,
   },
 
   secondary: {
-    default: `
-bg-secondary-500 
-text-white     
+    default: `       
+     bg-secondary-500
+      text-white
       hover:bg-[var(--color-secondary-700)]
-
       active:bg-[var(--color-secondary-400)]
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
+      ${iconGap}
     `,
-
-    disabled: `
+    disabled: `       
       bg-[var(--color-secondary-200)]
       text-white
       cursor-not-allowed
@@ -63,33 +61,29 @@ text-white
   },
 
   tertiary: {
-    default: `
-          text-black 
-          bg-transparent
-
-      hover:text-neutral-700
-      active:text-neutral-400
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
+    default: `       
+      text-black
+      bg-transparent
+      hover:text-neutral-900
+      active:text-neutral-800
+      ${iconGap}
     `,
-    disabled: `
-      text-[var(--color-primary-200)]
+    disabled: `       
+      text-[var(--color-neutral-600)]
       bg-transparent
       cursor-not-allowed
     `,
   },
 
   link: {
-    default: `   
-       text-[var(--color-primary-500)] bg-transparent
-hover:text-[var(--color-primary-700)]
-active:text-[var(--color-primary-400)]
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
+    default: `       
+      text-[var(--color-primary-500)]
+      bg-transparent
+      hover:text-[var(--color-primary-600)]
+      active:text-[var(--color-primary-400)]
+      ${iconGap}
     `,
-    disabled: `
+    disabled: `       
       text-[var(--color-primary-200)]
       bg-transparent
       cursor-not-allowed
@@ -97,43 +91,40 @@ active:text-[var(--color-primary-400)]
   },
 
   danger: {
-    default: `
-bg-danger-500 
-text-white     
+    default: `       
+    bg-danger-500
+      text-white
       hover:bg-danger-700
       active:bg-danger-400
-
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
+      ${iconGap}
     `,
-
-    disabled: `
+    disabled: `       
       bg-[var(--color-danger-200)]
       text-white
       cursor-not-allowed
     `,
   },
 
-
   outline: {
-    default: `
-      border border-[var(--border-width-md)] border-[var(--color-primary-500)] text-[var(--color-primary-500)] bg-transparent
-      hover:border-[var(--color-primary-600)] hover:text-[var(--color-primary-600)]
-      active:border-[var(--color-primary-700)] active:text-[var(--color-primary-700)]
-        gap-[8px]
-    hover:gap-[16px]
-    active:gap-[16px]
-    `,
-
-    disabled: `
+    default: `       
       border
       border-[var(--border-width-md)]
-      border-[var(--color-primary-300)]
-      text-[var(--color-primary-200)]
+      border-[var(--color-primary-500)]
+      text-[var(--color-primary-500)]
+      bg-transparent
+      hover:border-[var(--color-primary-600)]
+      hover:text-[var(--color-primary-600)]
+      active:border-[var(--color-primary-400)]
+      active:text-[var(--color-primary-400)]
+      ${iconGap}
+    `,
+    disabled: `       
+     border
+      border-[var(--border-width-md)]
+      border-[var(--color-primary-100)]
+      text-[var(--color-primary-100)]
       bg-transparent
       cursor-not-allowed
-      
     `,
   },
 };
