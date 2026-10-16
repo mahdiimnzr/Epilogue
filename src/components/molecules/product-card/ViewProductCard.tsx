@@ -42,9 +42,9 @@ export default function ViewProductCard({
         <article
             className={cn(
                 "flex w-full max-w-195.25 flex-col overflow-hidden",
-                "rounded-[26px] border border-gray-200 bg-white",
-                "text-black dark:bg-[#272727] dark:text-white",
-                "sm:flex-row sm:items-stretch sm:gap-3 sm:p-2",
+                "rounded-[26px]  border border-gray-200 dark:border-none bg-white",
+                "text-black dark:bg-[#272727]  dark:text-white",
+                "sm:flex-row  sm:items-stretch sm:gap-3 sm:p-2",
                 className,
             )}
             onClick={onClick}

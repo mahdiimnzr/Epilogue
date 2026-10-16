@@ -37,7 +37,7 @@ export default function ProductCard({
         <article
             className={cn(
                 "w-full  overflow-hidden rounded-[28px]",
-                "border border-gray-100 bg-white ",
+                " bg-white border border-gray-200 dark:border-none",
                 "dark:bg-[#272727] dark:text-white",
                 className,
             )}

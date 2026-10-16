@@ -1,3 +1,4 @@
+'use client'
 import Button from "@/components/atoms/button/Button";
 import ButtonOnlyIcon from "@/components/atoms/buttonOnlyIcon/buttonOnlyIcon";
 import Checkbox from "@/components/atoms/checkbox/Checkbox";
@@ -16,11 +17,14 @@ import bedroomImage from "@/app/assets/Image/BedRoom.png";
 import VillaCard from "@/components/molecules/villa-card/VillaCard";
 import ProductCard from "@/components/molecules/product-card/ProductCard";
 import ViewProductCard from "@/components/molecules/product-card/ViewProductCard";
+import Header from "@/components/organisms/common/Header";
+import Footer from "@/components/organisms/common/Footer";
 
 
 export default function ComponentsPreview() {
+    const isLoggedIn = true;
     return (
-        <main className="min-h-screen bg-gray-50 p-8">
+        <main className="min-h-screen  p-8">
             <h1 className="mb-8 text-3xl font-bold">
                 Components Preview
             </h1>
@@ -172,52 +176,52 @@ export default function ComponentsPreview() {
             </section>
 
             <section className="flex w-full items-center px-13.5 gap-4 pt-10">
-                  <VillaCard
+                <VillaCard
                     image={villa2Image.src}
                     title="اجاره ویلا در سوادکوه"
                     count={50}
                 />
-                              <VillaCard
+                <VillaCard
                     image={villa2Image.src}
                     title="اجاره ویلا در سوادکوه"
                     count={50}
                 />
-                              <VillaCard
+                <VillaCard
                     image={villa2Image.src}
                     title="اجاره ویلا در سوادکوه"
                     count={50}
                 />
-                              <VillaCard
+                <VillaCard
                     image={villa2Image.src}
                     title="اجاره ویلا در سوادکوه"
                     count={50}
                 />
 
-          
-          
+
+
             </section>
 
             <section className="flex items-center gap-4 px-13.5 pt-10">
                 <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-                       <CategoryCard
+                <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-                       <CategoryCard
+                <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-                       <CategoryCard
+                <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-                       <CategoryCard
+                <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-                       <CategoryCard
+                <CategoryCard
                     image={villaImage.src} title="ملک ویلایی"
                 />
-      
-          
+
+
             </section>
 
             <section className="grid grid-cols-4 items-center px-15.75 gap-4 pt-10">
@@ -234,7 +238,7 @@ export default function ComponentsPreview() {
                     monthlyRent="4.500.000"
                     pricePerNight="4.500.000"
                 />
-                                <ProductCard
+                <ProductCard
                     image={bedroomImage.src}
                     title="خانه ویلایی با پارکینگ اختصاصی"
                     address="خیابان 404 بروکلین، کالیفرنیا"
@@ -261,7 +265,7 @@ export default function ComponentsPreview() {
                     originalPrice="4.500.000"
                     off={15}
                 />
-                                <ProductCard
+                <ProductCard
                     image={bedroomImage.src}
                     title="خانه ویلایی با پارکینگ اختصاصی"
                     address="خیابان 404 بروکلین، کالیفرنیا"
@@ -306,7 +310,7 @@ export default function ComponentsPreview() {
                     originalPrice="5.500.000"
                     off={15}
                 />
-                              <ViewProductCard
+                <ViewProductCard
                     image={villaImage.src}
                     title="خانه ویلایی با پارکینگ اختصاصی"
                     address="خیابان 404 بروکلین، کالیفرنیا نیویورک"
@@ -335,7 +339,17 @@ export default function ComponentsPreview() {
                 />
 
             </section>
+         <Header
+                isLoggedIn={isLoggedIn}
+                user={{
+                    name: "Tina",
+                    phoneNumber: "09123456789",
+                }}
+   
+            />
 
+            <Footer/>
+   
         </main>
     );
 }
