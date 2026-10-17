@@ -15,7 +15,7 @@ const categories = [
 
 export default function CategorySection() {
     return (
-        <section className="w-full overflow-hidden bg-white py-10 md:py-14">
+        <section className="w-full overflow-hidden  py-10 md:py-14">
             <div className="mx-auto flex flex-col gap-6">
                 {/* Section heading */}
                 <div className="px-4 text-center">

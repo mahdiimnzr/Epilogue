@@ -4,6 +4,8 @@
 import { useState } from "react";
 import Button from "@/components/atoms/button/Button";
 import FilterInput from "@/components/molecules/inputs/FilterInput";
+import { HugeiconsIcon } from "@hugeicons/react";
+import { Search01Icon } from "@hugeicons/core-free-icons";
 
 type SearchMode = "reserve" | "rent" | "buy";
 
@@ -61,7 +63,7 @@ export default function HeroFilter() {
             <div
                 className="
           flex w-full flex-col gap-4 rounded-[28px]
-          bg-white p-4 shadow-lg
+          bg-white dark:bg-[#272727] p-4 shadow-lg
           md:flex-row md:items-end md:gap-5
           md:rounded-[30px] md:px-5 md:py-6
         "
@@ -132,7 +134,11 @@ export default function HeroFilter() {
                         });
                     }}
                 >
-                    جستجو کن
+                    <div className="flex gap-1 justify-center items-center">
+                             <HugeiconsIcon icon={Search01Icon} />
+                    جستجو کن 
+                    </div>
+              
                 </Button>
             </div>
         </div>

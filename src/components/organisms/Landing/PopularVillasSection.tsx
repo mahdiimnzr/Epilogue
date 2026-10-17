@@ -13,7 +13,7 @@ const villas = [
 
 export default function PopularVillasSection() {
   return (
-    <section className="w-full overflow-hidden bg-white px-4 py-8 md:px-6 md:py-12">
+    <section className="w-full overflow-hidden  px-4 py-8 md:px-6 md:py-12">
       <SectionHeading
         title="اجاره ویلا در محبوب‌ترین مقاصد ایران"
         subtitle="ویلاها را با ما انتخاب کنید"

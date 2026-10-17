@@ -17,7 +17,10 @@ export default function HomePage() {
         <PopularVillasSection />
         <TestimonialsSection />
         <BestPlaceSection />
-        <WhyChooseUsSection />
+        <div className="pb-24">
+          <WhyChooseUsSection />
+
+        </div>
       </div>
     </>
   );

@@ -14,7 +14,7 @@ const products = [
 
 export default function BestPlaceSection() {
     return (
-        <section className="w-full overflow-hidden bg-white px-4 py-8 md:px-6 md:py-12">
+        <section className="w-full overflow-hidden  px-4 py-8 md:px-6 md:py-12">
             <SectionHeading
                 title="همه جا با شما هستیم"
                 subtitle="بهترین اقامتگاه ها برای شما"

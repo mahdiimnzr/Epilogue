@@ -33,7 +33,7 @@ export default function HeroSection() {
           className="
             max-w-[700px] text-center text-3xl font-bold
             leading-[1.5] text-white
-            md:text-5xl md:leading-[1.4]
+            md:text-[64px] md:leading-[1.4]
           "
         >
           خانه رویایی
@@ -45,7 +45,7 @@ export default function HeroSection() {
           className="
             mt-6 max-w-[700px] text-center
             text-sm font-medium leading-7 text-white
-            md:text-base
+            md:text-[18px]
           "
         >
           ما آژانس املاکی هستیم که به شما کمک می‌کنیم بهترین

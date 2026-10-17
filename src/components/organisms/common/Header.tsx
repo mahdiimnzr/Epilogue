@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useEffect, useState } from "react";
@@ -112,7 +113,7 @@ export default function Header({
             onClick={onSellerClick}
         >
             <span className="flex items-center gap-2 whitespace-nowrap">
-                <HugeiconsIcon icon={Megaphone01Icon} size={18} />
+                <HugeiconsIcon icon={Megaphone01Icon} size={24} />
                 مهمترین اخبار!
             </span>
         </Button>
@@ -143,7 +144,9 @@ export default function Header({
 
     const renderNavItems = (mobile = false) =>
         navItems.map((item) => {
-            const isActive = pathname === item.href;
+            const isActive =
+                pathname === item.href &&
+                !(item.href === "/villas" && pathname !== "/villas");
 
             return (
                 <Link
@@ -168,16 +171,17 @@ export default function Header({
 
     return (
         <>
-<header
-    className={`
-        z-30 w-full px-4 py-6 sm:px-6 sm:py-8 lg:px-20
-        ${
-            pathname === "/"
-                ? "absolute inset-x-0 top-0"
-                : "relative"
-        }
-    `}
->                <div className="mx-auto flex w-full items-center justify-between gap-3">
+            <header
+                className={`
+                    z-30 w-full px-4 py-6 sm:px-6 sm:py-8 lg:px-20
+                    ${
+                        pathname === "/"
+                            ? "absolute inset-x-0 top-0"
+                            : "relative"
+                    }
+                `}
+            >
+                <div className="mx-auto flex w-full items-center justify-between gap-3">
                     {/* Logo */}
                     <Link
                         href="/"
@@ -191,20 +195,20 @@ export default function Header({
                     {/* Desktop Navigation */}
                     <nav
                         aria-label="منوی اصلی"
-                        className="hidden min-w-0 items-center gap-3 rounded-full bg-[#EDEDED] p-2 text-neutral-950 dark:bg-[#272727] dark:text-white md:flex lg:gap-5"
+                        className="hidden min-w-0 items-center gap-3 rounded-full bg-[#EDEDED] p-2 text-neutral-950 dark:bg-[#272727] dark:text-white min-[1071px]:flex lg:gap-5"
                     >
                         {renderNavItems()}
                         {renderSellerButton()}
                     </nav>
 
                     {/* Desktop Actions */}
-                    <div className="hidden shrink-0 items-center gap-2 md:flex">
+                    <div className="hidden shrink-0 items-center gap-2 min-[1071px]:flex">
                         {mounted && renderThemeButton()}
                         {renderAuthAction()}
                     </div>
 
                     {/* Mobile Actions */}
-                    <div className="flex shrink-0 items-center gap-2 md:hidden">
+                    <div className="flex shrink-0 items-center gap-2 min-[1071px]:hidden">
                         {renderAuthAction()}
 
                         <ButtonOnlyIcon
@@ -226,7 +230,7 @@ export default function Header({
                 <div
                     id="mobile-navigation"
                     dir="rtl"
-                    className="fixed inset-0 z-50 flex h-dvh w-full flex-col overflow-y-auto bg-primary-50 px-5 pt-8 pb-5 text-neutral-950 md:hidden"
+                    className="fixed inset-0 z-50 flex h-dvh w-full flex-col overflow-y-auto bg-primary-50 px-5 pt-8 pb-5 text-neutral-950 min-[1071px]:hidden"
                 >
                     {/* Menu Header */}
                     <div className="flex shrink-0 items-center justify-between border-b border-[#8B8D98] bg-primary-50 pb-5">
