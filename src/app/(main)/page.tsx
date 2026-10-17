@@ -6,22 +6,20 @@ import SpecialOffersSection from "@/components/organisms/Landing/SpecialOffersSe
 import TestimonialsSection from "@/components/organisms/Landing/TestimonialsSection";
 import WhyChooseUsSection from "@/components/organisms/Landing/WhyChooseUsSection";
 
-
 export default function HomePage() {
   return (
-    <>
-      <div className="flex flex-col gap-24">
-        <HeroSection />
-        <CategorySection />
-        <SpecialOffersSection />
-        <PopularVillasSection />
+    <div className="flex flex-col gap-24">
+      <HeroSection />
+      <CategorySection />
+      <SpecialOffersSection />
+      <PopularVillasSection />
+      <div className="hidden min-[1071px]:block">
         <TestimonialsSection />
-        <BestPlaceSection />
-        <div className="pb-24">
-          <WhyChooseUsSection />
-
-        </div>
       </div>
-    </>
+      <BestPlaceSection />
+      <div className="pb-24">
+        <WhyChooseUsSection />
+      </div>
+    </div>
   );
 }

@@ -253,7 +253,6 @@ export default function Header({
                         </button>
                     </div>
 
-                    {/* Navigation Links */}
                     <nav
                         aria-label="منوی موبایل"
                         className="flex flex-col gap-3 pt-5"
